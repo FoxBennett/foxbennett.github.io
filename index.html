@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fox Bennett — Software Developer</title>
+<meta name="description" content="Python and Node.js developer. Automation, serverless backends, internal tools. Working systems, not prototypes.">
+<style>
+  :root{
+    --bg:#0f1418; --panel:#161d23; --line:#232c34;
+    --text:#e6edf3; --muted:#8b98a5; --accent:#4dd0c1; --accent-dim:#2b8b80;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--bg);color:var(--text);
+    font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:72px 24px 96px}
+  header{margin-bottom:64px}
+  h1{font-size:38px;line-height:1.15;margin:0 0 10px;letter-spacing:-.5px}
+  .tagline{font-size:19px;color:var(--accent);margin:0 0 20px;font-weight:500}
+  .lede{font-size:17px;color:var(--muted);margin:0 0 26px;max-width:62ch}
+  .links{display:flex;flex-wrap:wrap;gap:10px}
+  .links a{
+    display:inline-block;padding:8px 16px;border:1px solid var(--line);border-radius:8px;
+    color:var(--text);text-decoration:none;font-size:14px;transition:border-color .15s,color .15s;
+  }
+  .links a:hover{border-color:var(--accent);color:var(--accent)}
+  h2{
+    font-size:13px;text-transform:uppercase;letter-spacing:1.4px;color:var(--muted);
+    margin:56px 0 20px;padding-bottom:10px;border-bottom:1px solid var(--line);font-weight:600;
+  }
+  .project{
+    background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:22px 24px;margin-bottom:14px;
+  }
+  .project h3{margin:0 0 6px;font-size:18px;letter-spacing:-.2px}
+  .project .meta{font-size:13px;color:var(--muted);margin:0 0 14px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .project p{margin:0 0 12px;color:var(--muted)}
+  .project ul{margin:0;padding-left:20px;color:var(--muted)}
+  .project li{margin:5px 0}
+  .project li strong{color:var(--text);font-weight:600}
+  .stack{font-size:13px;color:var(--accent-dim);margin-top:14px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+  .card h4{margin:0 0 8px;font-size:15px}
+  .card p{margin:0;font-size:14px;color:var(--muted)}
+  .rules li{margin:12px 0;color:var(--muted)}
+  .rules strong{color:var(--text)}
+  footer{margin-top:72px;padding-top:24px;border-top:1px solid var(--line);
+         font-size:13px;color:var(--muted)}
+  code{background:#1d262d;padding:2px 6px;border-radius:4px;font-size:14px;
+       font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent)}
+  @media (max-width:600px){
+    .wrap{padding:48px 20px 64px}
+    h1{font-size:30px}
+    .tagline{font-size:17px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Fox Bennett</h1>
+    <p class="tagline">Python &amp; Node.js — automation, backends, internal tools</p>
+    <p class="lede">
+      I build complete, working systems rather than prototypes. Below is what I
+      have shipped, what it runs on, and how I work. If you want to see how any
+      of it is put together, ask — I would rather show the code than describe it.
+    </p>
+    <nav class="links">
+      <a href="https://github.com/foxbennett">GitHub</a>
+      <a href="https://github.com/foxbennett/python-engineering-toolkit">Open-source toolkit</a>
+      <a href="mailto:ajiu9968@gmail.com">Email</a>
+    </nav>
+  </header>
+
+  <h2>Selected work</h2>
+
+  <div class="project">
+    <h3>Desktop AI Assistant Platform</h3>
+    <p class="meta">Independent project · 2026 · 25,000+ lines source, 33,000+ lines tests, 192 test modules</p>
+    <ul>
+      <li><strong>Layered architecture</strong> — contracts, adapters, providers, core and UI kept separate, so the assistant core does not depend on either the model backend or the interface.</li>
+      <li><strong>Multi-provider model abstraction</strong> — switch between LLM backends without changing calling code, with per-request cost tracking.</li>
+      <li><strong>Agent loop</strong> — task planning, tool registration and sandboxed execution, with structured progress reporting and recovery for interrupted runs.</li>
+      <li><strong>Windows UI automation</strong> — launches and drives desktop applications without stealing focus from the user's active window.</li>
+      <li><strong>Quality gates</strong> — AST-based detection of swallowed exceptions, credential scanning, line-ending and dependency audits, all behind one pre-commit command.</li>
+    </ul>
+    <p class="stack">Python · layered architecture · LLM integration · Windows UI automation</p>
+  </div>
+
+  <div class="project">
+    <h3>Business Operations Platform</h3>
+    <p class="meta">Independent project · 2026 · 31 client screens, 11 admin screens, 24 serverless functions</p>
+    <ul>
+      <li><strong>Client application</strong> — service catalogue with published pricing, multi-step request submission, order tracking with a status timeline, an in-app estimate calculator, reviews and feedback.</li>
+      <li><strong>Administration console</strong> — request pipeline from new through quoted and in-progress to delivered, revenue dashboard with status and channel breakdowns, staff management, and content editing that goes live without a redeployment.</li>
+      <li><strong>Backend</strong> — 24 serverless functions covering the order lifecycle, access control, payment callbacks, notifications and a daily automated health check.</li>
+      <li><strong>Permissions and payments</strong> — a three-tier permission model enforced server-side, plus payment integration end to end including a reconciliation query that recovers payments when a callback is missed.</li>
+      <li><strong>Delivery</strong> — 8 releases in 48 hours, each gated by syntax checks, static analysis and screenshot verification at real device dimensions.</li>
+    </ul>
+    <p class="stack">Serverless functions · REST API · NoSQL · payment integration · role-based access</p>
+  </div>
+
+  <div class="project">
+    <h3>Python Engineering Toolkit <span style="font-size:13px;color:var(--accent-dim);font-weight:400">— open source</span></h3>
+    <p class="meta">github.com/foxbennett/python-engineering-toolkit · standard library only</p>
+    <ul>
+      <li><strong>Silently-swallowed-exception detector</strong> — AST-based analysis that flags exception handlers discarding errors without logging, re-raising or explaining.</li>
+      <li><strong>Credential scanner</strong> — checks a working tree before a commit, and never prints what it finds: output is masked. Separates "shaped like a key" from "is a key".</li>
+      <li><strong>Convention checks</strong> — line-ending consistency, markdown fence pairing, and a single pre-commit entry point that chains every check together.</li>
+      <li><strong>Verified</strong> — 32 unit tests, and the project passes its own checks in CI across three Python versions.</li>
+    </ul>
+    <p class="stack">Python · AST · static analysis · no dependencies</p>
+  </div>
+
+  <h2>What I can build for you</h2>
+  <div class="cards">
+    <div class="card">
+      <h4>Automation</h4>
+      <p>File and folder workflows, batch renaming, archiving, duplicate detection, scheduled jobs.</p>
+    </div>
+    <div class="card">
+      <h4>Data cleanup</h4>
+      <p>CSV and spreadsheet merging, deduplication, validation, reformatting to an agreed specification.</p>
+    </div>
+    <div class="card">
+      <h4>Scraping &amp; integrations</h4>
+      <p>Collect data from websites or services and deliver it in a clean, usable structure.</p>
+    </div>
+    <div class="card">
+      <h4>Internal tools</h4>
+      <p>Request and order management, admin panels, status tracking, reporting dashboards.</p>
+    </div>
+    <div class="card">
+      <h4>Backends &amp; AI features</h4>
+      <p>API design, database schema, authentication and permissions, LLM integration and agent workflows.</p>
+    </div>
+    <div class="card">
+      <h4>Existing codebases</h4>
+      <p>Feature additions, bug fixes and test coverage — after reviewing the code and agreeing scope first.</p>
+    </div>
+  </div>
+
+  <h2>How I work</h2>
+  <ul class="rules">
+    <li><strong>Scope before code.</strong> Inputs, outputs, edge cases and acceptance criteria confirmed in writing. If something is unclear or out of scope, you hear it before the work starts — not after.</li>
+    <li><strong>AI-assisted, human-verified.</strong> AI tooling speeds the work up; it never replaces review. Every release is checked by automated tests and by inspecting the actual rendered output, not by assuming generated code is correct.</li>
+    <li><strong>Small, visible increments.</strong> Work is split into steps you can see and react to, so correcting course stays cheap.</li>
+    <li><strong>No surprise invoices.</strong> If requirements change mid-project, you get the cost and timeline impact before I continue.</li>
+    <li><strong>You own the result.</strong> Source code, setup instructions and handover notes ship with every deliverable.</li>
+  </ul>
+
+  <footer>
+    <p>
+      Written-first communication, in English. Requirements and acceptance
+      criteria are always confirmed in writing; calls scheduled whenever they
+      are useful.
+    </p>
+    <p style="margin-bottom:0">
+      <a href="mailto:ajiu9968@gmail.com" style="color:var(--accent);text-decoration:none">ajiu9968@gmail.com</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/foxbennett" style="color:var(--accent);text-decoration:none">github.com/foxbennett</a>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
